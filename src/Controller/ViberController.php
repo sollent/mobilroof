@@ -3,10 +3,10 @@
 namespace App\Controller;
 
 use App\Message\ViberNotification;
-use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Viber\Api\Exception\ApiException;
 use Viber\Api\Sender;
 use Viber\Client;
 
@@ -33,8 +33,8 @@ class ViberController extends AbstractController
             $client = new Client([ 'token' => $apiKey ]);
             $result = $client->setWebhook($webhookUrl);
             echo "Success!\n";
-        } catch (Exception $e) {
-            echo "Error: ". $e->getError() ."\n";
+        } catch (\Exception $e) {
+            echo "Error: ". $e->getMessage() ."\n";
         }
 
         $botSender = new Sender([
