@@ -178,7 +178,7 @@
       <updated>1572177751043</updated>
       <workItem from="1572177752453" duration="7229000" />
       <workItem from="1572623471140" duration="45000" />
-      <workItem from="1572623525015" duration="1388000" />
+      <workItem from="1572623525015" duration="1654000" />
     </task>
     <task id="LOCAL-00001" summary="Add bot">
       <created>1572208288013</created>
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572625109751</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add bot">
+      <created>1572626004596</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572626004596</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
