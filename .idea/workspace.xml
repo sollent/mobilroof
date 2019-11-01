@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78922828-b1b2-4520-ba2c-d2b4f60cdb79" name="Default" comment="">
+    <list default="true" id="78922828-b1b2-4520-ba2c-d2b4f60cdb79" name="Default" comment="Add bot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ViberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ViberController.php" afterDir="false" />
     </list>
@@ -178,7 +178,7 @@
       <updated>1572177751043</updated>
       <workItem from="1572177752453" duration="7229000" />
       <workItem from="1572623471140" duration="45000" />
-      <workItem from="1572623525015" duration="682000" />
+      <workItem from="1572623525015" duration="1388000" />
     </task>
     <task id="LOCAL-00001" summary="Add bot">
       <created>1572208288013</created>
@@ -187,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572208288013</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add bot">
+      <created>1572625109751</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572625109751</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

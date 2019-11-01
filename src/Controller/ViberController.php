@@ -3,11 +3,13 @@
 namespace App\Controller;
 
 use App\Message\ViberNotification;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Viber\Api\Exception\ApiException;
 use Viber\Api\Sender;
+use Viber\Bot;
 use Viber\Client;
 
 /**
@@ -42,8 +44,21 @@ class ViberController extends AbstractController
             'avatar' => 'https://developers.viber.com/img/favicon.ico',
         ]);
 
-        $client->sendMessage((new \Viber\Api\Message\Text())
-            ->setSender($botSender)
-            ->setText('ddadsdas'));
+        try {
+            $bot = new Bot([ 'token' => $apiKey ]);
+            $bot
+                ->onText('|.*|s', function ($event) use ($bot) {
+                    // .* - match any symbols (see PCRE)
+                    $bot->getClient()->sendMessage(
+                        (new \Viber\Api\Message\Text())
+                            ->setSender($botSender)
+                            ->setReceiver($event->getSender()->getId())
+                            ->setText("Hi!")
+                    );
+                })
+                ->run();
+        } catch (Exception $e) {
+            // todo - log errors
+        }
     }
 }
