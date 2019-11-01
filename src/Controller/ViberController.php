@@ -26,7 +26,7 @@ class ViberController extends AbstractController
     public function eventCreateAction(Request $request)
     {
 //        $this->dispatchMessage(new ViberNotification('Привеееет!!!'));
-        $apiKey = '4a7808342d67d79f-ce040566e89a60fd-cafc75380821a4c3'; // from "Edit Details" page
+        $apiKey = '4a89ee2bfe27d633-5b00caedd2d50e09-71aa79f3c8acdc93'; // from "Edit Details" page
         $webhookUrl = 'https://api.einstein.by/send-message'; // for exmaple https://my.com/bot.php
 
         try {
