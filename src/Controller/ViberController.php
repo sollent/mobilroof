@@ -34,8 +34,8 @@ class ViberController extends AbstractController
             echo "Success!\n";
         } catch (\Exception $e) {
             echo "Error: ". $e->getMessage() ."\n";
+            dump($e);exit();
         } // from "Edit Details" page
-
     }
 
     /**
@@ -70,5 +70,29 @@ class ViberController extends AbstractController
         } catch (Exception $e) {
             // todo - log errors
         }
+    }
+
+    /**
+     * @Route(
+     *     "/index"
+     * )
+     * @param \Borsaco\TelegramBotApiBundle\Service\Bot $bot
+     * @throws \Telegram\Bot\Exceptions\TelegramSDKException
+     */
+    public function index(\Borsaco\TelegramBotApiBundle\Service\Bot $bot)
+    {
+//        $firstBot = $bot->getBot('first');
+//        $firstBot->getMe();
+//
+//        dump($firstBot);
+//        exit();
+        $token = "1054186778:AAG15dlprQYmNymRd5iwEILwkIKJJbNFvog";
+
+        $data = [
+            'text' => 'your message here',
+            'chat_id' => 'test_mobilroof'
+        ];
+
+        file_get_contents("https://api.telegram.org/bot$token/sendMessage?" . http_build_query($data));
     }
 }
