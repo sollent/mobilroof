@@ -35,15 +35,7 @@ class ViberController extends AbstractController
         } catch (\Exception $e) {
             echo "Error: ". $e->getMessage() ."\n";
         } // from "Edit Details" page
-        $webhookUrl = 'https://api.einstein.by/send-message'; // for exmaple https://my.com/bot.php
 
-        try {
-            $client = new Client([ 'token' => $apiKey ]);
-            $result = $client->setWebhook($webhookUrl);
-            echo "Success!\n";
-        } catch (\Exception $e) {
-            echo "Error: ". $e->getMessage() ."\n";
-        }
     }
 
     /**
