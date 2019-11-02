@@ -9,9 +9,7 @@ namespace App\Service;
 interface MessageClientInterface
 {
     /**
-     * @param string $message
+     * @param $message
      */
-    public function sendMessage(string $message): void;
-
-    public function subscribe(): void;
+    public function sendMessage($message): void;
 }

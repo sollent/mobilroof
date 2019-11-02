@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78922828-b1b2-4520-ba2c-d2b4f60cdb79" name="Default" comment="Add bot">
-      <change afterPath="$PROJECT_DIR$/config/packages/telegram.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/TelegramController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DTO/Mobilroof/OrderDTO.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Mobilroof/OrderForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Message/TelegramNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MessageHandler/TelegramNotificationHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/TelegramService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ViberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ViberController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MessageHandler/ViberNotificationHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageHandler/ViberNotificationHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/MessageClientInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/MessageClientInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ViberClientService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ViberClientService.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +24,6 @@
     <execution>
       <executable />
     </execution>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>getErr</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -164,6 +162,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
   </component>
   <component name="RunDashboard">
@@ -191,6 +190,8 @@
       <workItem from="1572177752453" duration="7229000" />
       <workItem from="1572623471140" duration="45000" />
       <workItem from="1572623525015" duration="2797000" />
+      <workItem from="1572691788816" duration="424000" />
+      <workItem from="1572693719885" duration="2645000" />
     </task>
     <task id="LOCAL-00001" summary="Add bot">
       <created>1572208288013</created>

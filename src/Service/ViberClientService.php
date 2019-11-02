@@ -34,9 +34,9 @@ class ViberClientService implements MessageClientInterface
 
 
     /**
-     * @param string $message
+     * @param $message
      */
-    public function sendMessage(string $message): void
+    public function sendMessage($message): void
     {
         $botSender = new Sender([
             'name' => 'Reply bot',
