@@ -4,6 +4,7 @@ namespace App\Service;
 
 use App\DTO\Mobilroof\OrderDTO;
 use Telegram\Bot\Api;
+use Telegram\Bot\FileUpload\InputFile;
 
 /**
  * Class TelegramService
@@ -31,8 +32,14 @@ class TelegramService implements MessageClientInterface
         /** @var OrderDTO $message */
         $this->client->sendMessage([
             'chat_id' => self::CHAT_ID,
-            'text' => "Новый заказ:  Имя: " . $message->getFullName() . ". Номер телефона: " . $message->getPhone() . ". Комментарий: " . $message->getComment(),
-            null, null, null, null, null
+            'text' => "Новый заказ:  Имя: " . $message->getFullName() . ". Номер телефона: " . $message->getPhone() . ". Комментарий: " . $message->getComment()
         ]);
+
+        if ($message->getFile() !== null) {
+            $this->client->sendPhoto([
+                'chat_id' => self::CHAT_ID,
+                'photo' => InputFile::create($message->getFile())
+            ]);
+        }
     }
 }

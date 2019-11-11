@@ -24,6 +24,11 @@ class OrderDTO
     private $comment;
 
     /**
+     * @var string
+     */
+    private $file;
+
+    /**
      * @return string
      */
     public function getFullName(): ?string
@@ -69,5 +74,21 @@ class OrderDTO
     public function setComment(string $comment): void
     {
         $this->comment = $comment;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFile(): ?string
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param string $file
+     */
+    public function setFile(string $file): void
+    {
+        $this->file = $file;
     }
 }

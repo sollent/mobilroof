@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78922828-b1b2-4520-ba2c-d2b4f60cdb79" name="Default" comment="Add bot">
-      <change afterPath="$PROJECT_DIR$/src/Controller/TelegramController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DTO/Mobilroof/OrderDTO.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Mobilroof/OrderForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Message/TelegramNotification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageHandler/TelegramNotificationHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/TelegramService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageHandler/ViberNotificationHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageHandler/ViberNotificationHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/MessageClientInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/MessageClientInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ViberClientService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ViberClientService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DTO/Mobilroof/OrderDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DTO/Mobilroof/OrderDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Mobilroof/OrderForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Mobilroof/OrderForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/TelegramService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/TelegramService.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
