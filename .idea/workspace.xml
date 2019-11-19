@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78922828-b1b2-4520-ba2c-d2b4f60cdb79" name="Default" comment="Add bot">
+    <list default="true" id="78922828-b1b2-4520-ba2c-d2b4f60cdb79" name="Default" comment="Add files to telegram messages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DTO/Mobilroof/OrderDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DTO/Mobilroof/OrderDTO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/Mobilroof/OrderForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Mobilroof/OrderForm.php" afterDir="false" />
@@ -186,6 +186,7 @@
       <workItem from="1572623525015" duration="2797000" />
       <workItem from="1572691788816" duration="424000" />
       <workItem from="1572693719885" duration="2645000" />
+      <workItem from="1574156847635" duration="623000" />
     </task>
     <task id="LOCAL-00001" summary="Add bot">
       <created>1572208288013</created>
@@ -222,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572626455148</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add files to telegram messages">
+      <created>1573471481199</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573471481199</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +251,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add bot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add bot" />
+    <MESSAGE value="Add files to telegram messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files to telegram messages" />
   </component>
 </project>

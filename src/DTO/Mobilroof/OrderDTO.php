@@ -29,6 +29,11 @@ class OrderDTO
     private $file;
 
     /**
+     * @var string
+     */
+    private $pageTitle;
+
+    /**
      * @return string
      */
     public function getFullName(): ?string
@@ -90,5 +95,21 @@ class OrderDTO
     public function setFile(string $file): void
     {
         $this->file = $file;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPageTitle(): string
+    {
+        return $this->pageTitle;
+    }
+
+    /**
+     * @param string $pageTitle
+     */
+    public function setPageTitle(string $pageTitle): void
+    {
+        $this->pageTitle = $pageTitle;
     }
 }

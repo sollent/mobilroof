@@ -32,7 +32,7 @@ class TelegramService implements MessageClientInterface
         /** @var OrderDTO $message */
         $this->client->sendMessage([
             'chat_id' => self::CHAT_ID,
-            'text' => "Новый заказ:  Имя: " . $message->getFullName() . ". Номер телефона: " . $message->getPhone() . ". Комментарий: " . $message->getComment()
+            'text' => "Новый заказ:  Имя: " . $message->getFullName() . ". Номер телефона: " . $message->getPhone() . ". Комментарий: " . $message->getComment() . ". Страница: " . $message->getPageTitle()
         ]);
 
         if ($message->getFile() !== null) {
