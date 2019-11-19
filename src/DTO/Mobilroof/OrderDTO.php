@@ -100,7 +100,7 @@ class OrderDTO
     /**
      * @return string
      */
-    public function getPageTitle(): string
+    public function getPageTitle(): ?string
     {
         return $this->pageTitle;
     }
