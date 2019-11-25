@@ -29,10 +29,26 @@ class TelegramService implements MessageClientInterface
     {
         $this->client = new Api(self::API_KEY);
 
+        $result = null;
+
         /** @var OrderDTO $message */
+        if (preg_match('/^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/', $message->getPhone(), $matches))
+        {
+            var_dump($matches);
+            $result = $matches[1] . ' ' . $matches[2] . ' ' . $matches[3] . '-' . $matches[4] . '-' . $matches[5];
+
+            if ($matches[1] != '+375') {
+                $result = $matches[1] . $matches[2] . ' ' . $matches[3] . '-' . $matches[4] . '-' . $matches[5];
+            }
+        } else {
+            $result = $message->getPhone();
+        }
+
+
+
         $this->client->sendMessage([
             'chat_id' => self::CHAT_ID,
-            'text' => "Новый заказ:  Имя: " . $message->getFullName() . ". Номер телефона: " . $message->getPhone() . ". Комментарий: " . $message->getComment() . ". Страница: " . $message->getPageTitle()
+            'text' => "Новый заказ:  Имя: " . $message->getFullName() . ". Номер телефона: " . $result . ". Комментарий: " . $message->getComment() . ". Страница: " . $message->getPageTitle()
         ]);
 
         if ($message->getFile() !== null) {
