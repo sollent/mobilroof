@@ -29,21 +29,56 @@ class TelegramService implements MessageClientInterface
     {
         $this->client = new Api(self::API_KEY);
 
-        $result = null;
+//        $result = null;
 
-        /** @var OrderDTO $message */
-        if (preg_match('/^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/', $message->getPhone(), $matches))
+        // Phone number
+
+        $phone = $message->getPhone();
+
+        $phone = str_split($phone);
+
+        $newCount = 1;
+        $resultPhone = '';
+
+        $otherPart = '';
+
+        for ($i = count($phone); $i >= 0; $i--)
         {
-            var_dump($matches);
-            $result = $matches[1] . ' ' . $matches[2] . ' ' . $matches[3] . '-' . $matches[4] . '-' . $matches[5];
+//            echo "\n";
+//            echo $newCount;
 
-            if ($matches[1] != '+375') {
-                $result = $matches[1] . $matches[2] . ' ' . $matches[3] . '-' . $matches[4] . '-' . $matches[5];
+            if ($newCount === 3 || $newCount === 5) {
+                $resultPhone .= '-' . implode(array_slice($phone, $i, 2), '');
+            } elseif ($newCount === 8) {
+                $resultPhone .= '-' . implode(array_slice($phone, $i, 3), '');
             }
-        } else {
-            $result = $message->getPhone();
+
+            if ($newCount > 8) {
+                $otherPart .= implode(array_slice($phone, 0, $i + 1), '');
+                break;
+            }
+
+            $newCount++;
         }
 
+        $result = implode("-", array_reverse(explode("-", $resultPhone)));
+
+        if ($result[strlen($result) - 1] === '-') {
+            $result = substr($result, 0, -1);
+        }
+
+        $fullResult = $otherPart . ' ' . $result;
+
+//        /** @var OrderDTO $message */
+//        if (preg_match('/^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/', $message->getPhone(), $matches)) {
+//            $result = $matches[1] . ' ' . $matches[2] . ' ' . $matches[3] . '-' . $matches[4] . '-' . $matches[5];
+//
+//            if ($matches[1] != '+375') {
+//                $result = $matches[1] . $matches[2] . ' ' . $matches[3] . '-' . $matches[4] . '-' . $matches[5];
+//            }
+//        } else {
+//            $result = $message->getPhone();
+//        }
 
 
         $this->client->sendMessage([
