@@ -89,7 +89,7 @@ class TelegramService implements MessageClientInterface
         if ($message->getFileType() && ((string) $message->getFileType() === 'docx' || (string) $message->getFileType() === 'pdf' || (string) $message->getFileType() === 'pdf')) {
             $this->client->sendDocument([
                 'chat_id' => self::CHAT_ID,
-                'document' => InputFile::create($message->getFile(), 'Document.' . $message->getFileType()),
+                'document' => InputFile::create($message->getFile(), $message->getFilename()),
                 'caption' => 'Прикрепленный документ',
             ]);
         } else {
