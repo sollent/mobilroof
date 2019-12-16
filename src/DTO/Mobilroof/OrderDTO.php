@@ -31,6 +31,11 @@ class OrderDTO
     /**
      * @var string
      */
+    private $fileType;
+
+    /**
+     * @var string
+     */
     private $pageTitle;
 
     /**
@@ -111,5 +116,21 @@ class OrderDTO
     public function setPageTitle(string $pageTitle): void
     {
         $this->pageTitle = $pageTitle;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFileType(): ?string
+    {
+        return $this->fileType;
+    }
+
+    /**
+     * @param string $fileType
+     */
+    public function setFileType(string $fileType): void
+    {
+        $this->fileType = $fileType;
     }
 }
