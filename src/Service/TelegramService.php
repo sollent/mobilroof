@@ -92,5 +92,12 @@ class TelegramService implements MessageClientInterface
                 'photo' => InputFile::create($message->getFile())
             ]);
         }
+
+        if ($message->getFileType() && ((string) $message->getFileType() === 'docx' || (string) $message->getFileType() === 'pdf' || (string) $message->getFileType() === 'pdf')) {
+            $this->client->sendDocument([
+                'chat_id' => self::CHAT_ID,
+                'document' => InputFile::create($message->getFile())
+            ]);
+        }
     }
 }
