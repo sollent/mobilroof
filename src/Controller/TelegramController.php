@@ -28,7 +28,14 @@ class TelegramController extends AbstractController
         $orderDTO = new OrderDTO();
         $form = $this->createForm(OrderForm::class, $orderDTO);
 
+        $file = $request->files->get("file");
+        $extension = $file->guessExtension();
+
+        $form->get('fileType')->setData($extension);
+
         $form->handleRequest($request);
+
+        dump($form->getData());exit();
 
         if ($form->isSubmitted()) {
             $this->dispatchMessage(new TelegramNotification($form->getData()));

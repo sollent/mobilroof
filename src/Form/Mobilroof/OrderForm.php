@@ -34,6 +34,9 @@ class OrderForm extends AbstractType
             ->add('file', FileType::class, [
                 'required' => false
             ])
+            ->add('fileType', TextType::class, [
+                'required' => false
+            ])
             ->add('pageTitle', TextType::class, [
                 'required' => false
             ])
