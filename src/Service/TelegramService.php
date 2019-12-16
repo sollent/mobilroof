@@ -90,7 +90,7 @@ class TelegramService implements MessageClientInterface
             $this->client->sendDocument([
                 'chat_id' => self::CHAT_ID,
                 'document' => InputFile::create($message->getFile(), 'Document.' . $message->getFileType()),
-                'caption' => 'Прикрепленный докумен',
+                'caption' => 'Прикрепленный документ',
             ]);
         } else {
             $this->client->sendPhoto([

@@ -6,6 +6,7 @@ use App\DTO\Mobilroof\OrderDTO;
 use App\Form\Mobilroof\OrderForm;
 use App\Message\TelegramNotification;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,6 +29,7 @@ class TelegramController extends AbstractController
         $orderDTO = new OrderDTO();
         $form = $this->createForm(OrderForm::class, $orderDTO);
 
+        /** @var UploadedFile $file */
         $file = $request->files->get("file");
         $extension = $file->guessExtension();
 
@@ -37,6 +39,9 @@ class TelegramController extends AbstractController
             /** @var OrderDTO $orderDTO */
             $orderDTO = $form->getData();
             $orderDTO->setFileType($extension);
+            $orderDTO->setFilename($file->getClientOriginalName());
+
+            var_dump($orderDTO);exit();
 
             $this->dispatchMessage(new TelegramNotification($orderDTO));
 

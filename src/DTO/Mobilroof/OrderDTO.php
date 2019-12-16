@@ -31,6 +31,11 @@ class OrderDTO
     /**
      * @var string
      */
+    private $filename;
+
+    /**
+     * @var string
+     */
     private $fileType;
 
     /**
@@ -132,5 +137,21 @@ class OrderDTO
     public function setFileType(string $fileType): void
     {
         $this->fileType = $fileType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFilename(): ?string
+    {
+        return $this->filename;
+    }
+
+    /**
+     * @param string $filename
+     */
+    public function setFilename(string $filename): void
+    {
+        $this->filename = $filename;
     }
 }
