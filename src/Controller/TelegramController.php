@@ -31,11 +31,11 @@ class TelegramController extends AbstractController
         $file = $request->files->get("file");
         $extension = $file->guessExtension();
 
+        var_dump($extension);exit();
+
         $form->get('fileType')->setData($extension);
 
         $form->handleRequest($request);
-
-        dump($form->getData());exit();
 
         if ($form->isSubmitted()) {
             $this->dispatchMessage(new TelegramNotification($form->getData()));
