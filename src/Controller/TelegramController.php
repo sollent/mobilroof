@@ -43,7 +43,7 @@ class TelegramController extends AbstractController
         if ($form->isSubmitted()) {
             /** @var OrderDTO $orderDTO */
             $orderDTO = $form->getData();
-            if ($extension) {
+            if ($extension !== null) {
                 $orderDTO->setFileType($extension);
                 $orderDTO->setFilename($file->getClientOriginalName());
             }
