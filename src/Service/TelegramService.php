@@ -86,7 +86,7 @@ class TelegramService implements MessageClientInterface
             'text' => "Новый заказ:  Имя: " . $message->getFullName() . ". Номер телефона: " . $fullResult . ". Комментарий: " . $message->getComment() . ". Страница: " . $message->getPageTitle()
         ]);
 
-        if ($message->getFileType() && ((string) $message->getFileType() === 'docx' || (string) $message->getFileType() === 'pdf' || (string) $message->getFileType() === 'pdf' || (string) $message->getFileType() === 'xls' || (string) $message->getFileType() === 'tiff')) {
+        if ($message->getFileType() && ((string) $message->getFileType() === 'docx' || (string) $message->getFileType() === 'pdf' || (string) $message->getFileType() === 'pdf' || (string) $message->getFileType() === 'xls' || (string) $message->getFileType() === 'xlsx' || (string) $message->getFileType() === 'tiff')) {
             $this->client->sendDocument([
                 'chat_id' => self::CHAT_ID,
                 'document' => InputFile::create($message->getFile(), $message->getFilename()),
